@@ -33,11 +33,11 @@
             };
 
             if (adSSetup.view === "d") {
-                adSSetup.adPlacements.push("billboard","mrec");
+                adSSetup.adPlacements.push("billboard","mrec_btf");
                 adSSetup.adSlotSizes.billboard = [{"minWidth": 1,"sizes": [[970,250],[800,250]]}];
                 adSSetup.adSlotSizes.mrec = [{"minWidth": 1,"sizes": [[300,250],[300,600]]}];
             } else {
-                adSSetup.adPlacements.push("banner","mrec_btf");
+                adSSetup.adPlacements.push("banner","mrec");
                 adSSetup.adSlotSizes.banner = [{"minWidth": 1,"sizes": [[320,50],[320,75]]}];
                 adSSetup.adSlotSizes.mrec_btf  = [{"minWidth": 1,"sizes": [[300,250]]}];
             }
@@ -140,7 +140,7 @@
         <!-- Desktop Billboard -->
         <div id="billboard">
         <!-- Mobile Mrec-->
-        </div><div id="mrec_btf"></div>
+        </div><div id="mrec"></div>
         </div>
 
         <!-- Teaser Picture AS-->
@@ -157,7 +157,7 @@
                     <div class="col-lg-4 mt-3">
                         <div class="pt-2">
                             <p class="h3">Work Details</p>
-                            <div id="mrec"></div>
+                            <div id="mrec_btf"></div>
                             <ul class="list-inline mb-0 mt-3">
                               <li class="list-inline-item text-muted mb-1 d-block"><span class="mr-2 text-dark font-weight-bold">Project:</span>Test site with Ads</li>
                               <li class="list-inline-item text-muted mb-1 d-block"><span class="mr-2 text-dark font-weight-bold">Date:</span>06-07-2018</li>
