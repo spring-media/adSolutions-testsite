@@ -1,3 +1,11 @@
+<!-------------------------------------------------------------
+* Projec Name      : Test site for Ads
+* Author           : Carlos Bracho - Ad Solutions
+* Version          : 1.0.0
+* Created          : JULY 2018
+* Licence          : MIT
+*------------------------------------------------------------ -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,7 +41,7 @@
                 adSSetup.adSlotSizes.mrec = [{"minWidth": 1,"sizes": [[300,250],[300,600]]}];
             } else {
                 adSSetup.adPlacements.push("banner","mrec_btf");
-                adSSetup.adSlotSizes.banner = [{"minWidth": 1,"sizes": [[320,50],[300,250]]}];
+                adSSetup.adSlotSizes.banner = [{"minWidth": 1,"sizes": [[320,50],[320,75]]}];
                 adSSetup.adSlotSizes.mrec_btf  = [{"minWidth": 1,"sizes": [[300,250]]}];
             }
 
@@ -103,18 +111,21 @@
                 
                 <ul class="navbar-nav-tamox">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="https://github.com/CDPAdSolution">Repository</a></li>
+                    <li><a href="https://github.com/CDPAdSolution/testsite">Sourcecode</a></li>
+                    <li><a href="https://github.com/CDPAdSolution/adSolution-Reference/blob/master/publisher-display-reference.md">Ad Documentation</a></li>
                 </ul>
             </div>
         </div>
         <!-- End Menu -->
 
+
     	<!-- Start Page Title -->
         <section class="bg-light page-title">
+
+            <!-- Mobile Banner -->
+            <div class="pb-1" id="banner"></div>
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -128,8 +139,14 @@
         </section>
         <!-- End Page Title -->
 
-        <div id="billboard"></div>
+        <div class="pt-4">
+        <!-- Desktop Billboard -->
+        <div id="billboard">
+        <!-- Mobile Mrec-->
+        </div><div id="mrec_btf"></div>
+        </div>
 
+        <!-- Teaser Picture AS-->
         <div class="text-center mx-auto pt-4">
             <img class="img-fluid" src="images/ascdp.jpg">
 
@@ -143,6 +160,7 @@
                     <div class="col-lg-4 mt-3">
                         <div class="pt-2">
                             <p class="h3">Work Details</p>
+                            <div id="mrec"></div>
                             <ul class="list-inline mb-0 mt-3">
                               <li class="list-inline-item text-muted mb-1 d-block"><span class="mr-2 text-dark font-weight-bold">Client:</span> Tamox Theme</li>
                               <li class="list-inline-item text-muted mb-1 d-block"><span class="mr-2 text-dark font-weight-bold">Date:</span>08-02-2018</li>
@@ -161,6 +179,18 @@
                             <p class="text-muted">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                             <p class="text-muted">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here.</p>
                         </div>
+                        <div class="jumbotron">
+                            <h1 class="display-4">Hey!, dev!</h1>
+                            <p class="lead">Do you want to see, how the ads are integrated?</p>
+                            <hr class="my-4">
+                            <p>Check out integration guidelines and clone them <i class="far fa-smile-wink"></i></p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="https://github.com/CDPAdSolution/adSolution-Reference/blob/master/publisher-display-reference.md" role="button">Guidelines in Github</a>
+                            </p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="https://github.com/CDPAdSolution/testsite" role="button">See the Sourcecode</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,13 +208,6 @@
                                 <i class="fab fa-adversal"></i>
                             </div>
                     	</div>
-                        <div class="footer_menu">
-                            <ul class="mb-0 list-inline text-center mt-5">
-                                <li class="list-inline-item mr-0"><a href="#" class="text-muted">Terms &amp; Condition</a></li>
-                                <li class="list-inline-item mr-0"><a href="#" class="text-muted">Privacy Policy</a></li>
-                                <li class="list-inline-item mr-0"><a href="#" class="text-muted">Contact Us</a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <div class="fot_bor"></div>
@@ -196,10 +219,10 @@
                         </div>
                 		<div class="float-right float_none">
                             <ul class="list-inline fot_social mb-0">
-                                <li class="list-inline-item"><a href="" class="social-icon text-muted"><i class="fab fa-github"></i></a></li>
-                                <li class="list-inline-item"><a href="" class="social-icon text-muted"><i class="fab fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="" class="social-icon text-muted"><i class="fab fa-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="" class="social-icon text-muted"><i class="fab fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://github.com/CDPAdSolution" class="social-icon text-muted"><i class="fab fa-github"></i></a></li>
+                                <li class="list-inline-item"><a href="https://twitter.com/axelspringer" class="social-icon text-muted"><i class="fab fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/axelspringer_se/" class="social-icon text-muted"><i class="fab fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://de-de.facebook.com/AxelSpringerKarriere/" class="social-icon text-muted"><i class="fab fa-facebook"></i></a></li>
                             </ul>
                         </div>
                 	</div>
@@ -211,6 +234,7 @@
     	<!-- JAVASCRIPTS -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/isotope.js"></script>
         <!--CUSTOM JS-->
         <script src="js/custom.js"></script>
 
