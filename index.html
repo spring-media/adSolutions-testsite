@@ -10,6 +10,48 @@
         <meta name="keywords" content=""/>
         <meta name="author" content="SRBThemes"/>
 
+        <!-- Advertisement Setup -->
+
+        <script type="text/javascript">
+            var winW = window.innerWidth || window.document.documentElement.clientWidth || window.document.body.clientWidth;
+            // gives configs of the page
+            adSSetup = {
+                view: ((window.screen && screen.availWidth && (screen.availWidth <= 800)) || winW <= 800) ? "m" : "d", // has to fit the design of the page
+                partners: false,
+                adPlacements: [],
+                adSlotSizes: {},
+                colorBg: !0, // enable/disable coloring of the page-background
+                bgClick: !0, // enable/disable click on page-background
+                stickySky: !0, // enable/disable stickyness for skyscraper
+                pageName: "demo_index", // defines pageName don't change for testing
+                target: "singleAds;multiAds;ich;du;team=adtech,MIT;"
+            };
+
+            if (adSSetup.view === "d") {
+                adSSetup.adPlacements.push("superbanner","sky","billboard","mrec","mrec_btf","mrec_btf_2","mrec_btf_3","inpage");
+                adSSetup.adSlotSizes.mrec_btf = [{"minWidth": 1,"sizes": [[300,250],[300,600]]}];
+                adSSetup.adSlotSizes.inpage = [{"minWidth": 1,"sizes": [[1,1],[640,360],[1000,300]]}];
+            } else {
+                adSSetup.adPlacements.push("banner","mrec","mrec_btf","mrec_btf_2","mrec_btf_3","inpage");
+                adSSetup.adSlotSizes.mrec_btf = [{"minWidth": 1,"sizes": [[640,360],[300,250],[320,50]]}];
+                adSSetup.adSlotSizes.inpage = [{"minWidth": 1,"sizes": [[1,1]]}];
+            }
+
+            // gets fired each time an adcall request is finished
+            sas_loadHandler = function(f) {
+                if (!f.hasAd || f.tempName === "blocker") {
+                    // do something when no ad will be delivered
+                } else {
+                    // do something when ad will be delivered
+                }
+                console.log('format : '+f.id + ' '+f.hasAd );
+            }
+
+        </script>
+
+        <!-- Ad Libray - Here Happens the whole magic -->
+        <script type="text/javascript" src="https://adtechnology.axelspringer.com/beta/1h/pages/adtechnology.axelspringer.js"></script>
+
         <!-- Favicon-->
         <link rel="shortcut icon" href="images/favicon.ico">
 
@@ -85,6 +127,8 @@
             </div>
         </section>
         <!-- End Page Title -->
+
+        <div id="billboard"></div>
 
         <div class="text-center mx-auto pt-4">
             <img class="img-fluid" src="images/ascdp.jpg">
