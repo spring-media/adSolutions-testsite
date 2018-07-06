@@ -23,18 +23,18 @@
                 colorBg: !0, // enable/disable coloring of the page-background
                 bgClick: !0, // enable/disable click on page-background
                 stickySky: !0, // enable/disable stickyness for skyscraper
-                pageName: "demo_index", // defines pageName don't change for testing
+                pageName: "carlos_index", // defines pageName don't change for testing
                 target: "singleAds;multiAds;ich;du;team=adtech,MIT;"
             };
 
             if (adSSetup.view === "d") {
-                adSSetup.adPlacements.push("superbanner","sky","billboard","mrec","mrec_btf","mrec_btf_2","mrec_btf_3","inpage");
-                adSSetup.adSlotSizes.mrec_btf = [{"minWidth": 1,"sizes": [[300,250],[300,600]]}];
-                adSSetup.adSlotSizes.inpage = [{"minWidth": 1,"sizes": [[1,1],[640,360],[1000,300]]}];
+                adSSetup.adPlacements.push("billboard","mrec");
+                adSSetup.adSlotSizes.billboard = [{"minWidth": 1,"sizes": [[970,250],[800,250]]}];
+                adSSetup.adSlotSizes.mrec = [{"minWidth": 1,"sizes": [[300,250],[300,600]]}];
             } else {
-                adSSetup.adPlacements.push("banner","mrec","mrec_btf","mrec_btf_2","mrec_btf_3","inpage");
-                adSSetup.adSlotSizes.mrec_btf = [{"minWidth": 1,"sizes": [[640,360],[300,250],[320,50]]}];
-                adSSetup.adSlotSizes.inpage = [{"minWidth": 1,"sizes": [[1,1]]}];
+                adSSetup.adPlacements.push("banner","mrec_btf");
+                adSSetup.adSlotSizes.banner = [{"minWidth": 1,"sizes": [[320,50],[300,250]]}];
+                adSSetup.adSlotSizes.mrec_btf  = [{"minWidth": 1,"sizes": [[300,250]]}];
             }
 
             // gets fired each time an adcall request is finished
